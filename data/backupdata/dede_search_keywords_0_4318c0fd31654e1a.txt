@@ -1,0 +1,9 @@
+INSERT INTO `dede_search_keywords` VALUES('1','请输入搜索关键词产品','请输入搜索关键词产品 产品 关键词 搜索 输入','1','0','1496988600','0','0');
+INSERT INTO `dede_search_keywords` VALUES('2','产品','产品','21','16','1513219668','0','0');
+INSERT INTO `dede_search_keywords` VALUES('3','加密','加密','1','0','1497843032','0','0');
+INSERT INTO `dede_search_keywords` VALUES('4','asd','asd','3','0','1498879453','0','0');
+INSERT INTO `dede_search_keywords` VALUES('5','阿萨德','阿萨德 萨德','5','0','1513215342','0','0');
+INSERT INTO `dede_search_keywords` VALUES('6','时的发生','时的发生 发生','1','0','1504315988','0','0');
+INSERT INTO `dede_search_keywords` VALUES('7','dfgdf','dfgdf','1','0','1508200822','0','0');
+INSERT INTO `dede_search_keywords` VALUES('8','asds','asds','1','0','1513735824','0','0');
+INSERT INTO `dede_search_keywords` VALUES('9','sadsa','sadsa','1','0','1513735857','0','0');

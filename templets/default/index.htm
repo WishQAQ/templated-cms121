@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="author" content="order by dede58.com" />
+<link href="/skin/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+<link href="/skin/css/pintuer.css" type="text/css" rel="stylesheet" />
+<link href="/skin/css/style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="/skin/js/jquery.min.js"></script>
+<script type="text/javascript" src="/skin/js/jquery.caroufredsel.js"></script>
+<script type="text/javascript" src="/skin/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/skin/js/touchslide.1.1.js"></script>
+<script type="text/javascript" src="/skin/js/common.js"></script>
+<script type="text/javascript" src="/skin/js/flash.js"></script>
+<!--[if (gt IE 9)|!(IE)]><!-->
+<link href="/skin/css/animate.min.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="/skin/js/wow.min.js"></script>
+<!--<![endif]-->
+</head>
+<body>
+<!--头部开始--> 
+{dede:include filename="head.htm"/}
+<div class="clear"></div>
+<div id="search2">
+  <form  name="formsearch" action="{dede:global.cfg_cmsurl/}/plus/search.php">
+    <input type="hidden" name="kwtype" value="0" />
+    <input name="q" value="搜索" class="skw2" size="12" onFocus="javascript:clearsearch(this);" onBlur="javascript:redosearch(this);"  />
+    <input name="submit"  type="submit" value="" class="sub2" />
+  </form>
+</div>
+<div class="white"></div>
+<div class="clear"></div>
+<div id="flash">
+  <div id="adBox" class="slideBox">
+    <div class="bd">
+      <ul>
+        {dede:arclist typeid='14' row='5' titlelen='50' orderby='pubdate'} <a>
+        <li style="background: transparent url([field:picname/]) no-repeat scroll center center / cover ; width: 100%; float: left; margin-right: -100%; position: relative; display: block; z-index: 1;"></li>
+        </a> {/dede:arclist}
+      </ul>
+    </div>
+    <div class="hd">
+      <ul>
+      </ul>
+    </div>
+    <span class="prev"></span><span class="next"></span></div>
+</div>
+<div class="clear"></div>
+<!-- 新闻中心 start -->
+<div id="news">
+  <div class="home_top"> {dede:type typeid='13'}
+    <h3>[field:typename/]</h3>
+    {/dede:type}
+    <h4>NEWS</h4>
+  </div>
+  <div class="news_con">
+    <div class="row">
+      <div class="index_news"> {dede:arclist typeid='13' row='5' titlelen='50' orderby='pubdate'}
+        <div class='news_item'><a href='[field:arcurl/]'>
+          <div class='news_item_img'><img src='[field:picname/]'/></div>
+          <div class='news_item_con'>
+            <div class='news_item_title'>[field:title/]</div>
+            <div class='news_item_des'>[field:description function="cn_substr(@me,200)"/]...<br/>
+              <br/>
+            </div>
+          </div>
+          </a></div>
+        {/dede:arclist} </div>
+      <div class="mobile_news">
+        <div class="scrollable scrollable-4col">
+          <ul class="scrollable-default clearfix">
+            {dede:arclist typeid='13' row='5' titlelen='50' orderby='pubdate'}
+            <div class='news_item'><a href='[field:arcurl/]'>
+              <div class='news_item_img'><img src='[field:picname/]' /></div>
+              <div class='news_item_con'>
+                <div class='news_item_title'>[field:title/]</div>
+                <div class='news_item_des'>[field:description function="cn_substr(@me,200)"/]...<br/>
+                  <br/>
+                </div>
+              </div>
+              </a></div>
+            {/dede:arclist}
+          </ul>
+          <div id="news_page"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="news_more">{dede:type typeid='13'} <a href="[field:typelink/]">
+    <p>查看全部</p>
+    <span></span></a>{/dede:type} </div>
+</div>
+<!-- 新闻中心 end --> 
+<!-- 产品中心 start -->
+<div id="pro">
+  <div class="home_top"> {dede:type typeid='2'}
+    <h3>[field:typename/]</h3>
+    {/dede:type}
+    <h4>INDUSTRY</h4>
+  </div>
+  <div class="pro_con">
+    <div class="index_pro"> {dede:arclist typeid='2' row='6' titlelen='50' orderby='pubdate'}
+      <div class='pro_item'><a href='[field:arcurl/]'>
+        <div class='pro_item_img' style='background-image:url([field:picname/])'></div>
+        <div class='pro_item_layer'>
+          <div class='div1'>
+            <div class='div2'>
+              <div class='pro_item_title'>
+                <h3>[field:title/]</h3>
+                <h4></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        </a></div>
+      {/dede:arclist} </div>
+    <div class="mobile_pro">
+      <div id="slideBox" class="slideBox">
+        <div class="bd">
+          <ul>
+            {dede:arclist typeid='2' row='6' titlelen='50' orderby='pubdate'}
+            <div class='pro_item'><a href='[field:arcurl/]'>
+              <div class='pro_item_img' style='background-image:url([field:picname/])'></div>
+              <div class='pro_item_layer'>
+                <div class='div1'>
+                  <div class='div2'>
+                    <div class='pro_item_title'>
+                      <h3>[field:title/]</h3>
+                      <h4></h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </a></div>
+            {/dede:arclist}
+          </ul>
+        </div>
+        <div class="hd">
+          <ul>
+          </ul>
+        </div>
+        <span class="prev"></span><span class="next"></span></div>
+    </div>
+  </div>
+</div>
+<!-- 产品中心 end -->
+<div class="clear"></div>
+<div class="clear"></div>
+{dede:include filename="footer.htm"/} 
+<!--版权区结束-->
+</body>
+</html>

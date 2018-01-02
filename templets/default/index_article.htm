@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link href="/skin/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+<link href="/skin/css/pintuer.css" type="text/css" rel="stylesheet" />
+<link href="/skin/css/style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="/skin/js/jquery.min.js"></script>
+<script type="text/javascript" src="/skin/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/skin/js/touchslide.1.1.js"></script>
+<script type="text/javascript" src="/skin/js/common.js"></script>
+<!--[if (gt IE 9)|!(IE)]><!-->
+<link href="/skin/css/animate.min.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="/skin/js/wow.min.js"></script>
+<!--<![endif]-->
+</head>
+<body>
+<!--头部开始--> 
+{dede:include filename="head.htm"/}
+<div class="clear"></div>
+<div id="search2">
+  <form  name="formsearch" action="{dede:global.cfg_cmsurl/}/plus/search.php">
+    <input type="hidden" name="kwtype" value="0" />
+    <input name="q" value="搜索" class="skw2" size="12" onFocus="javascript:clearsearch(this);" onBlur="javascript:redosearch(this);"  />
+    <input name="submit"  type="submit" value="" class="sub2" />
+  </form>
+</div>
+<div class="white"></div>
+<div class="clear"></div>
+<div id="banner"><img src="/skin/images/b.jpg"/></div>
+<div class="clear"></div>
+<!--内容区开始-->
+<div class="main"> {dede:include filename="left.htm"/}
+  <div class="container">
+    <div id="right">
+      <div id="right_con">{dede:field.content/}</div>
+    </div>
+  </div>
+</div>
+<!--内容区结束-->
+<div class="clear"></div>
+{dede:include filename="footer.htm"/} 
+<!--版权区结束-->
+</body>
+</html>
